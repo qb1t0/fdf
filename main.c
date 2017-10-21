@@ -1,4 +1,4 @@
-#include "includes/fdf.h
+#include "includes/fdf.h"
 #include <stdio.h>
 #include <fcntl.h>
 
@@ -6,18 +6,21 @@ int fdf_error(int type)
 {
     type -= 1;
     if (type == 0)
-        ft_printf("%s", g_e[type]);
+        ft_printf("%s\n", g_e[type]);
     else
-        ft_printf(COL_RED"%s"COL_EOC, g_e[type]);
+        ft_printf(COL_RED"%s\n"COL_EOC, g_e[type]);
     return (0);
 }
 
 int     fdf_checkstr(char *s)
 {
     int i;
+    char **str;
 
-    !s[i] ?
-    while(s[i])
+    i = 0;
+    str = ft_strsplit(s, ' ');
+    while (str[i])
+        ft_isaldigit(str[i]) ? i++ : exit(fdf_error(4));
 
 }
 
@@ -31,7 +34,7 @@ t_map   *fdf_parse(int fd, int gnl)
     m->size = 0;
     while ((gnl = get_next_line(fd, &s)) > 0)
     {
-        s[0] ? fdf_checkstr(s) : exit(fdf_error(3));
+        s[0] && ft_isdigit(s[0]) ? fdf_checkstr(s) : exit(fdf_error(3));
         ++m->size;
     }
     gnl < 0 ? exit(fdf_error(3)) : 0;
