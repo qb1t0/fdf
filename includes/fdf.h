@@ -17,10 +17,11 @@ static char *g_e[] = {
 
 typedef struct s_map{
     int        size;
+    int        width;
 }              t_map;
 
 typedef struct s_o{
     int        z;       //z-coord
-    int        c;       //c-color
-}               t_o;
+    long       c;       //c-color
+}              t_o;
 #endif //FDF_TEST_FDF_H
