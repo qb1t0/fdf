@@ -1,15 +1,15 @@
 #include "includes/fdf.h"
 
-long    fdf_endian(const char *s)
+int    fdf_endian(const char *s)
 {
-    long key = 0;
-    long buf = 0;
+    int key = 0;
+    int buf = 0;
     int i = 0;
 
     while(s[i])
     {
         buf = s[i];
-        buf <<= i * 8;
+        buf <<= i * 4;
         key |= buf;
         i++;
     }
@@ -38,17 +38,29 @@ t_o     fdf_checkstr(char *str)
             str[i] ? 0 : exit(fdf_error(7));
         }
         else
-            buf.c = 0;
+            buf.c = 0xFFFFFF;
     }
     return (buf);
 }
 
+
 void    fdf_init(t_map *m, t_o fig[m->y][m->x])
 {
+
     m->mlx = mlx_init();
-    m->win = mlx_new_window(m->mlx, 1900, 1200, "fdf - ysalata");
+    m->win = mlx_new_window(m->mlx, WIDTH, HEIGHT, "fdf - ysalata");
+    m->img = mlx_new_image(m->win, WIDTH, HEIGHT);
+    m->im = mlx_get_data_addr(m->img, &m->bpp, &m->sl, &m->endian);
+    fdf_4all(m, fig);
+ //   m->im[WIDTH / 2 * m->bpp / 8 + m->sl * HEIGHT / 2] = 0xFFFFFF;
+ //   m->im[WIDTH / 2  * m->bpp / 8 + m->sl * HEIGHT / 2 + 1] = (char)(0xFFFFFF>> 8);
+ //   m->im[WIDTH / 2  * m->bpp / 8 + m->sl * HEIGHT / 2 + 2] = (char)(0xFFFFFF >> 16);
+    mlx_put_image_to_window(m->mlx, m->win, m->img, 0, 0);
+    // m->im = mlx_new_image(m->win, 100, 100);
+//    mlx_hook(m->win, 17, 1L << 17, (int (*)())fdf_error(-1), m->mlx);
     mlx_loop(m->mlx);
 }
+
 
 void    fdf_parse(int fd, t_map *m)
 {
@@ -68,8 +80,8 @@ void    fdf_parse(int fd, t_map *m)
             if (x < m->x)
             {
                 fig[y][x] = fdf_checkstr(str[x]);
-                fig[y][x].x = x;
-                fig[y][x].y = y;
+                fig[y][x].x = x * 10;
+                fig[y][x].y = y * 10;
             }
             x++;
         }

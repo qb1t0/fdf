@@ -4,6 +4,7 @@
 int fdf_error(int type)
 {
     type -= 1;
+    type == -2 ? exit(1) : 0;
     if (type == 0)
         ft_printf("%s\n", g_e[type]);
     else
@@ -40,7 +41,7 @@ t_map   *fdf_open(int fd, int gnl, char *name)
     gnl < 0 ? exit(fdf_error(3)) : 0;
     if (m->y > 0)
         while (xlen[m->x] != NULL && xlen[m->x][0])
-         m->x++;
+            m->x++;
     return (m);
 }
 
