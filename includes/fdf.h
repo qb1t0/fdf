@@ -2,8 +2,8 @@
 # define FDF_TEST_FDF_H
 
 # include "../libft/libft.h"
-# include "../minilibx/mlx.h"
-//# include <mlx.h>
+//# include "../minilibx/mlx.h"
+# include <mlx.h>
 # include "../libft/ft_printf/ft_printf.h"
 # include <stdio.h>
 # include <fcntl.h>
@@ -27,6 +27,9 @@ static char *g_e[] = {
 typedef struct  s_map{
     int         y;
     int         x;
+    int         xmove;
+    int         ymove;
+    float       zoom;
     void        *img;
     int         bpp;
     int         sl;
@@ -34,6 +37,7 @@ typedef struct  s_map{
     char        *im;
     void        *mlx;
     void        *win;
+
 }               t_map;
 
 typedef struct  s_o{
