@@ -20,6 +20,12 @@ int		ft_str(const char *s1, const char *s2)
     return (0);
 }
 
+/*
+ * Opening input map
+ * Check 4 empty string ("") or !.fdf in file name
+ * Calculate number of lines in file in m->y
+ * Calculate width of the first line in m->x
+ */
 t_map   *fdf_open(int fd, int gnl, char *name)
 {
     t_map *m;
@@ -27,18 +33,19 @@ t_map   *fdf_open(int fd, int gnl, char *name)
     char **xlen;
     int  l;
 
+    xlen = NULL;
     l = (int)ft_strlen(name);
-    (l < 5 || ft_str(name + l - 4, ".fdf")) ? exit(fdf_error(1)) : 0;
-    fd <= 0 ? exit(fdf_error(2)) : 0;
+    (l < 5 || ft_str(name + l - 4, ".fdf")) ? exit(fdf_error(1)) : 0; //invalid name error
+    fd <= 0 ? exit(fdf_error(2)) : 0;               //open fail error
     m = (t_map *)malloc(sizeof(t_map));
     m->x = 0;
     m->y = 0;
     while ((gnl = get_next_line(fd, &s)) > 0)
     {
         m->y == 0 ? xlen = ft_strsplit(s, ' ') : 0;
-        s[0] ? ++m->y : exit(fdf_error(4));
+        s[0] ? ++m->y : exit(fdf_error(4));         //empty line error
     }
-    gnl < 0 ? exit(fdf_error(3)) : 0;
+    gnl < 0 ? exit(fdf_error(3)) : 0;               //reading error
     if (m->y > 0)
         while (xlen[m->x] != NULL && xlen[m->x][0])
             m->x++;
@@ -50,9 +57,10 @@ int main(int ac, char **av)
     t_map *map;
 
     ac != 2 ? exit(fdf_error(1)) : 0;
-    map = fdf_open(open(av[1], O_RDONLY), 0, av[1]);
-    map->y == 0 || map->x == 0? \
-        exit(fdf_error(5)) : fdf_parse(open(av[1], O_RDONLY), map);
+    map = fdf_open(open(av[1], O_RDONLY), 0, av[1]); //map validate
+    if (map->y == 0 || map->x == 0)
+        exit(fdf_error(5));
+    fdf_parse(open(av[1], O_RDONLY), map);
     printf("Hello, World!\n");
     return 0;
 }

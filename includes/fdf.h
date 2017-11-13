@@ -24,11 +24,26 @@ static char *g_e[] = {
         "Invalid color value",
 };
 
+typedef struct  s_o{
+    float       x;
+    float       y;
+    float       z;       //z-coord
+    int         c;       //c-color
+    double      v;
+    float       xi;
+    float       yi;
+    double      vi;
+    float       zi;
+    int         ci;
+}               t_o;
+
 typedef struct  s_map{
     int         y;
     int         x;
+    int         a;
     int         xmove;
     int         ymove;
+    int         zmove;
     float       zoom;
     void        *img;
     int         bpp;
@@ -37,17 +52,24 @@ typedef struct  s_map{
     char        *im;
     void        *mlx;
     void        *win;
+    int         centerx;
+    int         centery;
+    int				deltax;
+    int				deltay;
+    int				incdeltax;
+    int				incdeltay;
+    int				h_delta;
+    int				err;
+    int				delta_err;
+    int				incr_x;
+    int				incr_y;
+    t_o             **f;
 
 }               t_map;
 
-typedef struct  s_o{
-    float       x;
-    float       y;
-    float       z;       //z-coord
-    int         c;       //c-color
-}               t_o;
-
-void fdf_4all(t_map *m, t_o f[m->y][m->x]);
+void    fdf_redraw(t_map *m);
+void fdf_4all(t_map *m);
+void    fdf_recalc(t_map *m, t_o **f);
 void fdf_dda(t_o f, t_o e, int x1, int y1, t_map *m);
 t_map   *fdf_open(int fd, int gnl, char *name);
 int     fdf_error(int type);

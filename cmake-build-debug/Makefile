@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/y/ysalata/CLionProjects/fdf
+CMAKE_SOURCE_DIR = /Users/ysalata/CLionProjects/fdf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ysalata/CLionProjects/fdf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles /nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles /Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ algo.c.s:
 	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/algo.c.s
 .PHONY : algo.c.s
 
+drawmap.o: drawmap.c.o
+
+.PHONY : drawmap.o
+
+# target to build an object file
+drawmap.c.o:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/drawmap.c.o
+.PHONY : drawmap.c.o
+
+drawmap.i: drawmap.c.i
+
+.PHONY : drawmap.i
+
+# target to preprocess a source file
+drawmap.c.i:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/drawmap.c.i
+.PHONY : drawmap.c.i
+
+drawmap.s: drawmap.c.s
+
+.PHONY : drawmap.s
+
+# target to generate assembly for a file
+drawmap.c.s:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/drawmap.c.s
+.PHONY : drawmap.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -216,6 +243,9 @@ help:
 	@echo "... algo.o"
 	@echo "... algo.i"
 	@echo "... algo.s"
+	@echo "... drawmap.o"
+	@echo "... drawmap.i"
+	@echo "... drawmap.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

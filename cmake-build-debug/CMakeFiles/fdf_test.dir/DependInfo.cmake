@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/nfs/2016/y/ysalata/CLionProjects/fdf/algo.c" "/nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/algo.c.o"
-  "/nfs/2016/y/ysalata/CLionProjects/fdf/main.c" "/nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/main.c.o"
-  "/nfs/2016/y/ysalata/CLionProjects/fdf/parsing.c" "/nfs/2016/y/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/parsing.c.o"
+  "/Users/ysalata/CLionProjects/fdf/algo.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/algo.c.o"
+  "/Users/ysalata/CLionProjects/fdf/drawmap.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/drawmap.c.o"
+  "/Users/ysalata/CLionProjects/fdf/main.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/main.c.o"
+  "/Users/ysalata/CLionProjects/fdf/parsing.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/parsing.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/nfs/2016/y/ysalata/CLionProjects/fdf/include -I/nfs/2016/y/ysalata/CLionProjects/fdf/libft -I/nfs/2016/y/ysalata/CLionProjects/fdf/minilibx_macos 
+C_INCLUDES = -I/Users/ysalata/CLionProjects/fdf/include -I/Users/ysalata/CLionProjects/fdf/libft -I/Users/ysalata/CLionProjects/fdf/minilibx_macos 
 
