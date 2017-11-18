@@ -153,12 +153,62 @@ CMakeFiles/fdf_test.dir/drawmap.c.o.provides: CMakeFiles/fdf_test.dir/drawmap.c.
 CMakeFiles/fdf_test.dir/drawmap.c.o.provides.build: CMakeFiles/fdf_test.dir/drawmap.c.o
 
 
+CMakeFiles/fdf_test.dir/onaction.c.o: CMakeFiles/fdf_test.dir/flags.make
+CMakeFiles/fdf_test.dir/onaction.c.o: ../onaction.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fdf_test.dir/onaction.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_test.dir/onaction.c.o   -c /Users/ysalata/CLionProjects/fdf/onaction.c
+
+CMakeFiles/fdf_test.dir/onaction.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf_test.dir/onaction.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ysalata/CLionProjects/fdf/onaction.c > CMakeFiles/fdf_test.dir/onaction.c.i
+
+CMakeFiles/fdf_test.dir/onaction.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf_test.dir/onaction.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ysalata/CLionProjects/fdf/onaction.c -o CMakeFiles/fdf_test.dir/onaction.c.s
+
+CMakeFiles/fdf_test.dir/onaction.c.o.requires:
+
+.PHONY : CMakeFiles/fdf_test.dir/onaction.c.o.requires
+
+CMakeFiles/fdf_test.dir/onaction.c.o.provides: CMakeFiles/fdf_test.dir/onaction.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/onaction.c.o.provides.build
+.PHONY : CMakeFiles/fdf_test.dir/onaction.c.o.provides
+
+CMakeFiles/fdf_test.dir/onaction.c.o.provides.build: CMakeFiles/fdf_test.dir/onaction.c.o
+
+
+CMakeFiles/fdf_test.dir/recalculating.c.o: CMakeFiles/fdf_test.dir/flags.make
+CMakeFiles/fdf_test.dir/recalculating.c.o: ../recalculating.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fdf_test.dir/recalculating.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_test.dir/recalculating.c.o   -c /Users/ysalata/CLionProjects/fdf/recalculating.c
+
+CMakeFiles/fdf_test.dir/recalculating.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf_test.dir/recalculating.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ysalata/CLionProjects/fdf/recalculating.c > CMakeFiles/fdf_test.dir/recalculating.c.i
+
+CMakeFiles/fdf_test.dir/recalculating.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf_test.dir/recalculating.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ysalata/CLionProjects/fdf/recalculating.c -o CMakeFiles/fdf_test.dir/recalculating.c.s
+
+CMakeFiles/fdf_test.dir/recalculating.c.o.requires:
+
+.PHONY : CMakeFiles/fdf_test.dir/recalculating.c.o.requires
+
+CMakeFiles/fdf_test.dir/recalculating.c.o.provides: CMakeFiles/fdf_test.dir/recalculating.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/recalculating.c.o.provides.build
+.PHONY : CMakeFiles/fdf_test.dir/recalculating.c.o.provides
+
+CMakeFiles/fdf_test.dir/recalculating.c.o.provides.build: CMakeFiles/fdf_test.dir/recalculating.c.o
+
+
 # Object files for target fdf_test
 fdf_test_OBJECTS = \
 "CMakeFiles/fdf_test.dir/main.c.o" \
 "CMakeFiles/fdf_test.dir/parsing.c.o" \
 "CMakeFiles/fdf_test.dir/algo.c.o" \
-"CMakeFiles/fdf_test.dir/drawmap.c.o"
+"CMakeFiles/fdf_test.dir/drawmap.c.o" \
+"CMakeFiles/fdf_test.dir/onaction.c.o" \
+"CMakeFiles/fdf_test.dir/recalculating.c.o"
 
 # External object files for target fdf_test
 fdf_test_EXTERNAL_OBJECTS =
@@ -167,11 +217,13 @@ fdf_test: CMakeFiles/fdf_test.dir/main.c.o
 fdf_test: CMakeFiles/fdf_test.dir/parsing.c.o
 fdf_test: CMakeFiles/fdf_test.dir/algo.c.o
 fdf_test: CMakeFiles/fdf_test.dir/drawmap.c.o
+fdf_test: CMakeFiles/fdf_test.dir/onaction.c.o
+fdf_test: CMakeFiles/fdf_test.dir/recalculating.c.o
 fdf_test: CMakeFiles/fdf_test.dir/build.make
 fdf_test: ../libft/libft.a
 fdf_test: ../minilibx/libmlx.a
 fdf_test: CMakeFiles/fdf_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable fdf_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable fdf_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +235,8 @@ CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/main.c.o.requires
 CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/parsing.c.o.requires
 CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/algo.c.o.requires
 CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/drawmap.c.o.requires
+CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/onaction.c.o.requires
+CMakeFiles/fdf_test.dir/requires: CMakeFiles/fdf_test.dir/recalculating.c.o.requires
 
 .PHONY : CMakeFiles/fdf_test.dir/requires
 

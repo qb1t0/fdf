@@ -7,7 +7,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ysalata/CLionProjects/fdf/algo.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/algo.c.o"
   "/Users/ysalata/CLionProjects/fdf/drawmap.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/drawmap.c.o"
   "/Users/ysalata/CLionProjects/fdf/main.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/main.c.o"
+  "/Users/ysalata/CLionProjects/fdf/onaction.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/onaction.c.o"
   "/Users/ysalata/CLionProjects/fdf/parsing.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/parsing.c.o"
+  "/Users/ysalata/CLionProjects/fdf/recalculating.c" "/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir/recalculating.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

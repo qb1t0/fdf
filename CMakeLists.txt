@@ -4,7 +4,7 @@ project(fdf_test)
 set(CMAKE_C_STANDARD 99)
 find_package(OpenGL REQUIRED)
 
-set(SOURCE_FILES main.c includes/fdf.h parsing.c algo.c drawmap.c)
+set(SOURCE_FILES main.c includes/fdf.h parsing.c algo.c drawmap.c onaction.c recalculating.c)
 
 include_directories(include libft minilibx_macos) # header directories
 

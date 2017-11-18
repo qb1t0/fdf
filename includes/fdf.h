@@ -2,8 +2,8 @@
 # define FDF_TEST_FDF_H
 
 # include "../libft/libft.h"
-//# include "../minilibx/mlx.h"
-# include <mlx.h>
+# include "../minilibx/mlx.h"
+//# include <mlx.h>
 # include "../libft/ft_printf/ft_printf.h"
 # include <stdio.h>
 # include <fcntl.h>
@@ -12,6 +12,8 @@
 # define HEX "01234567890abcdef"
 # define WIDTH 1900
 # define HEIGHT 1200
+//x - value, t - type : t ? HEIGHT : WEIGHT;
+# define C(x, t) ((t) ? (WIDTH/(x)) : (HEIGHT/(x)))
 
 
 static char *g_e[] = {
@@ -52,29 +54,47 @@ typedef struct  s_map{
     char        *im;
     void        *mlx;
     void        *win;
-    int         centerx;
-    int         centery;
-    int				deltax;
-    int				deltay;
-    int				incdeltax;
-    int				incdeltay;
-    int				h_delta;
-    int				err;
-    int				delta_err;
-    int				incr_x;
-    int				incr_y;
+    float       centerx;
+    float       centery;
+    int			dx;
+    int			dy;
+    int			dh;
+    int			de;
+    int         wx;
+    int			e;
+    int         on;
+    int			incdeltax;
+    int			incdeltay;
+    int			incr_x;
+    int			incr_y;
+    int         xaxis;
+    int         yaxis;
+    int         zaxis;
     t_o             **f;
-
 }               t_map;
 
-void    fdf_redraw(t_map *m);
-void fdf_4all(t_map *m);
-void    fdf_recalc(t_map *m, t_o **f);
-void fdf_dda(t_o f, t_o e, int x1, int y1, t_map *m);
-t_map   *fdf_open(int fd, int gnl, char *name);
-int     fdf_error(int type);
+void    fdf_printmap(t_map *m);
+void    im_draw(t_map *f, t_o f1, int x, int y);
+void	fdf_brezenhem(t_map *f, t_o f1, t_o f2);
+void	fdf_delta_init(t_map *f, t_o f1, t_o f2);
+
+void    fdf_mlxinit(t_map *m);
+int     fdf_onmouse(int mouse,int x, int y, t_map *m);
+int     fdf_onbutton(int button, t_map *m);
+void    fdf_drawwindow(t_map *m, int code);
+
+void    fdf_recalculate(t_map *m, t_o **f);
+void    fdf_rotation(float *x, float *y, float *z, t_map *m);
+
+
+int     fdf_endian(const char *s);
+t_o     fdf_checkstr(char *str, int i);
+void    fdf_mapresize(t_o **f, t_map *m);
 void    fdf_parse(int fd, t_map *m);
-t_o     fdf_checkstr(char *str);
-int    fdf_endian(const char *s);
+
+
+int     fdf_error(int type);
+int		ft_str(const char *s1, const char *s2);
+t_map   *fdf_open(int fd, int gnl, char *name);
 
 #endif //FDF_TEST_FDF_H

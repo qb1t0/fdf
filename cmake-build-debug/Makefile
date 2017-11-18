@@ -204,6 +204,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/main.c.s
 .PHONY : main.c.s
 
+onaction.o: onaction.c.o
+
+.PHONY : onaction.o
+
+# target to build an object file
+onaction.c.o:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/onaction.c.o
+.PHONY : onaction.c.o
+
+onaction.i: onaction.c.i
+
+.PHONY : onaction.i
+
+# target to preprocess a source file
+onaction.c.i:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/onaction.c.i
+.PHONY : onaction.c.i
+
+onaction.s: onaction.c.s
+
+.PHONY : onaction.s
+
+# target to generate assembly for a file
+onaction.c.s:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/onaction.c.s
+.PHONY : onaction.c.s
+
 parsing.o: parsing.c.o
 
 .PHONY : parsing.o
@@ -231,6 +258,33 @@ parsing.c.s:
 	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/parsing.c.s
 .PHONY : parsing.c.s
 
+recalculating.o: recalculating.c.o
+
+.PHONY : recalculating.o
+
+# target to build an object file
+recalculating.c.o:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/recalculating.c.o
+.PHONY : recalculating.c.o
+
+recalculating.i: recalculating.c.i
+
+.PHONY : recalculating.i
+
+# target to preprocess a source file
+recalculating.c.i:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/recalculating.c.i
+.PHONY : recalculating.c.i
+
+recalculating.s: recalculating.c.s
+
+.PHONY : recalculating.s
+
+# target to generate assembly for a file
+recalculating.c.s:
+	$(MAKE) -f CMakeFiles/fdf_test.dir/build.make CMakeFiles/fdf_test.dir/recalculating.c.s
+.PHONY : recalculating.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,9 +303,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... onaction.o"
+	@echo "... onaction.i"
+	@echo "... onaction.s"
 	@echo "... parsing.o"
 	@echo "... parsing.i"
 	@echo "... parsing.s"
+	@echo "... recalculating.o"
+	@echo "... recalculating.i"
+	@echo "... recalculating.s"
 .PHONY : help
 
 

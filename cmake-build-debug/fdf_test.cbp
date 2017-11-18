@@ -100,7 +100,13 @@
 		<Unit filename="/Users/ysalata/CLionProjects/fdf/main.c">
 			<Option target="fdf_test"/>
 		</Unit>
+		<Unit filename="/Users/ysalata/CLionProjects/fdf/onaction.c">
+			<Option target="fdf_test"/>
+		</Unit>
 		<Unit filename="/Users/ysalata/CLionProjects/fdf/parsing.c">
+			<Option target="fdf_test"/>
+		</Unit>
+		<Unit filename="/Users/ysalata/CLionProjects/fdf/recalculating.c">
 			<Option target="fdf_test"/>
 		</Unit>
 		<Unit filename="/Users/ysalata/CLionProjects/fdf/CMakeLists.txt">
