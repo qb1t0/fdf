@@ -1,3 +1,0 @@
-/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ysalata/CLionProjects/fdf/cmake-build-debug/CMakeFiles/fdf_test.dir
